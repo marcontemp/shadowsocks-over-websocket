@@ -371,7 +371,7 @@ TCPRelay.prototype.handleConnectionByLocal = function(connection) {
 
 				stage = STAGE_CONNECTING;
 
-				serverConnection = new WebSocket('wss://' + serverAddress + ':' + serverPort, {
+				serverConnection = new WebSocket('ws://' + serverAddress + ':' + serverPort, {
 					perMessageDeflate: false
 				});
 				serverConnection.on('open', function() {
